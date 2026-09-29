@@ -1,35 +1,44 @@
-L'agence "**Santé publique France**" a lancé un appel à projets pour trouver des idées innovantes d’applications en lien avec l'alimentation. Vous souhaitez y participer et proposer une idée d’application.
+# 🥗 Open Food Facts — Analyse exploratoire & idée d'application
 
-Mission
-------------------------
+> Exploration statistique de la base Open Food Facts pour proposer une application innovante en lien avec l'alimentation et la santé publique.
 
-Après avoir lu l’appel à projets, voici les différentes étapes que vous avez identifiées :
+---
 
-1) Traiter le jeu de données, en réfléchissant à une idée d’application. 
-   En mettant en évidence les éventuelles valeurs manquantes, avec au moins 3 méthodes de traitement adaptées aux variables concernées.
-   En identifiant et en quantifiant les éventuelles valeurs aberrantes de chaque variable.
-   En Automatisant ces traitements pour éviter de répéter ces opérations
-   Le programme doit fonctionner si la base de données est légèrement modifiée (ajout d’entrées, par exemple).
+## 🎯 Contexte
 
-2) Tout au long de l’analyse, produire des visualisations afin de mieux comprendre les données. Effectuer une **analyse univariée** pour chaque variable intéressante, afin de synthétiser son comportement.
+Dans le cadre d'un appel à projets de **Santé publique France**, ce projet analyse la base de données Open Food Facts pour évaluer la faisabilité d'une application destinée au grand public. L'enjeu : extraire des insights actionnables à partir de données massives et hétérogènes, et les communiquer de façon accessible à un public non expert.
 
-L’appel à projets spécifie que l’analyse doit être simple à comprendre pour un public néophyte.
+---
 
-3) Confirmer ou infirmer les hypothèses à l’aide d’une **analyse multivariée**. Effectuer les **tests statistiques** appropriés pour vérifier la significativité des résultats.
+## ⚙️ Ce que fait le projet
 
-4) Justifier votre idée d’application. Identifier des arguments justifiant la faisabilité (ou non) de l’application à partir des données Open Food Facts.
+- **Nettoyage des données** — détection et traitement des valeurs manquantes (3 méthodes), identification des valeurs aberrantes, pipeline automatisé et robuste aux mises à jour du dataset
+- **Analyse univariée** — distribution et comportement de chaque variable clé
+- **Analyse multivariée** — corrélations, ACP, tests statistiques pour valider les hypothèses
+- **Idée d'application** — proposition argumentée sur la base des données, avec évaluation de faisabilité
 
-5) Rédiger un rapport d’exploration et pitcher votre idée durant la soutenance du projet.
+---
 
------------------------------
-**Données** 
+## 🛠️ Stack
 
-https://world.openfoodfacts.org/data
+`Python` `Pandas` `NumPy` `Matplotlib` `Seaborn` `Scipy` `Scikit-learn`
 
------------------------------------------
-Compétences évaluées
---------------------------------------------
- * Effectuer une analyse statistique multivariée
- * Communiquer ses résultats à l’aide de représentations graphiques lisibles et pertinentes
- * Effectuer une analyse statistique univariée
- * Effectuer des opérations de nettoyage sur des données structurées
+---
+
+## 📁 Structure du projet
+
+```
+├── notebooks/
+│   ├── 01_nettoyage.ipynb          # Traitement des données
+│   ├── 02_analyse_univariee.ipynb  # Visualisations par variable
+│   └── 03_analyse_multivariee.ipynb # Tests statistiques & corrélations
+└── README.md
+```
+
+---
+
+## 📂 Données
+
+Base de données collaborative **Open Food Facts** — [world.openfoodfacts.org](https://world.openfoodfacts.org/data)
+
+Plus de 2 millions de produits alimentaires référencés, avec composition nutritionnelle, labels, catégories et Nutri-Score.
